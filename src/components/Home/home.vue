@@ -55,8 +55,11 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+    .home-wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
 </style>
 
 

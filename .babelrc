@@ -1,3 +1,4 @@
+// npm install babel-plugin-component --save-dev
 {
   "presets": [
     ["env", {
