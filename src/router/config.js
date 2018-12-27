@@ -7,5 +7,6 @@
 export default {
     Home: () => import( 'components/Home/home'),
     NoPermission: () => import('base/NoPermission/noPermission'),
-    NotFound: () => import('base/404/404')
+    NotFound: () => import('base/404/404'),
+    Login: () => import('components/Login/login')
 }

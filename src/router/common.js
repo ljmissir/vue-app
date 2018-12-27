@@ -10,8 +10,7 @@ export default [
     // 默认页面
     {
         path: '/',
-        redirect: '/home',
-        hidden:true
+        redirect: '/login'
     },
     // 无权限页面
     {

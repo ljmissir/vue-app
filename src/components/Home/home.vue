@@ -59,6 +59,9 @@
     .home-wrapper {
         width: 1200px;
         margin: 0 auto;
+        p {
+            padding: 2px;
+        }
     }
 </style>
 
