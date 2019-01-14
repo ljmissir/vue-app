@@ -19,6 +19,7 @@ export default {
             return;
         }
         commit(mutationTypes.SET_PRODUCT_COUNT, count);
+        // 这条为测试commit
         commit(mutationTypes.SET_IS_LOGIN, !state.isLogin);
     }
 }

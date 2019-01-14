@@ -11,6 +11,7 @@ import getters from './getters';
 import state from './state';
 import mutations from './mutations';
 
+// 开发环境下，打印相关日志
 import createLogger from 'vuex/dist/logger';
 const debug = process.env.NODE_ENV !== 'production';
 
