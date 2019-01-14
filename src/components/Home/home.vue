@@ -41,8 +41,8 @@
         },
         methods: {
             ...mapMutations({
-                setUserInfo: 'USER_INFO',
-                setNewsList: 'NEWS_LIST'
+                setUserInfo: 'SET_NEWS_LIST',
+                setNewsList: 'SET_NEWS_LIST'
             }),
             deleteProduct() {
                 MessageBox.confirm('确认删除商品？', '删除商品', '保存', '取消保存', 'error', () => {

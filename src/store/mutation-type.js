@@ -1,5 +1,11 @@
+/*
+ * author: liaojianming
+ * date: 2019-01-14
+ * description: mutationTypes.js
+*/
+
 export default {
     SET_IS_LOGIN: 'SET_IS_LOGIN',
-    USER_INFO: 'USER_INFO',
-    NEWS_LIST: 'NEWS_LIST'
+    SET_USER_INFO: 'SET_USER_INFO',
+    SET_NEWS_LIST: 'SET_NEWS_LIST'
 }
