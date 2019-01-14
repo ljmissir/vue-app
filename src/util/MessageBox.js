@@ -18,10 +18,9 @@ export default {
                 cancel && cancel();
         });
     },
-    alert: function(message, title, type, callBack) {
-        MessageBox.alert(message, title, {
-            type: type
-        }).then(() => {
+    alert: function(message, title, callBack) {
+        MessageBox.alert(message, title
+            ).then(() => {
             callBack && callBack();
         }).catch(() => {
             console.log('取消');

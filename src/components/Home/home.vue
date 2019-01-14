@@ -8,6 +8,11 @@
         <div>
             <p v-for="(item, index) in dataList" :key="index">{{item.content}}</p>
         </div>
+        <p>
+            <el-button size="mini" type="default" @click="decreaseProduct">-</el-button>
+            商品数量：{{count}}
+            <el-button size="mini" type="default" @click="increaseProduct">+</el-button>
+        </p>
     </div>
 </template>
 
@@ -17,7 +22,7 @@
     import {Message} from 'element-ui';
     import Vue from 'vue';
     import {Button} from 'element-ui';
-    import {mapMutations, mapGetters} from 'vuex';
+    import {mapMutations, mapGetters, mapActions} from 'vuex';
     Vue.use(Button);
 
     export default {
@@ -33,7 +38,8 @@
         computed: {
             ...mapGetters([
                 'isLogin',
-                'newsList'
+                'newsList',
+                'count'
             ])
         },
         created() {
@@ -43,6 +49,9 @@
             ...mapMutations({
                 setUserInfo: 'SET_NEWS_LIST',
                 setNewsList: 'SET_NEWS_LIST'
+            }),
+            ...mapActions({
+                addProductCount: 'addCount'
             }),
             deleteProduct() {
                 MessageBox.confirm('确认删除商品？', '删除商品', '保存', '取消保存', 'error', () => {
@@ -78,6 +87,20 @@
                 }, () => {
                     console.log(4);
                 })
+            },
+            increaseProduct() {
+                var count = this.count;
+                count += 1;
+                this.addProductCount({
+                    count: count
+                });
+            },
+            decreaseProduct() {
+                var count = this.count;
+                count -= 1;
+                this.addProductCount({
+                    count: count
+                });
             }
         }
     }

@@ -16,5 +16,8 @@ export default {
     },
     [mutationTypes.SET_NEWS_LIST](state, newsList) {
         state.newsList = newsList
+    },
+    [mutationTypes.SET_PRODUCT_COUNT](state, count) {
+        state.count = count;
     }
 }

@@ -7,5 +7,6 @@
 export default {
     isLogin: false,
     userInfo: new Object(),
-    newsList: new Array()
+    newsList: new Array(),
+    count: 1
 }
