@@ -43,6 +43,7 @@
     import {rAF} from '../../animation/rAF.js';
     import  { TweenLite } from 'gsap';
     import './../../animation/normalize.css';
+    import {mapMutations, mapGetters} from 'vuex';
     Vue.use(Card);
     Vue.use(Form);
     Vue.use(FormItem);
@@ -73,6 +74,9 @@
             animationRunning();
         },
         methods: {
+            ...mapMutations({
+                setIsLogin: 'SET_IS_LOGIN'
+            }),
         	// 登录表单提交事件
             submitForm(loginForm) {
                 this.params = {
@@ -81,7 +85,8 @@
                 }
                 this.$refs[loginForm].validate((valid) => {
                     if (valid) {
-                        this.logIn()
+                        this.logIn();
+                        this.setIsLogin(true);
                     } else {
                         return false;
                     }
